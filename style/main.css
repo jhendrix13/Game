@@ -1,0 +1,469 @@
+body {
+    margin:0;
+    padding:0;
+    background-color:#181818;
+    color:#888888;
+}
+
+button {
+    cursor:pointer;
+}
+
+#tools {
+    background-color:black;
+}
+
+#container {
+    margin:0 auto;
+    text-align:center;
+}
+#gameContainer {
+    margin:0 auto;
+    margin-top:10px;
+    text-align:center;
+}
+
+#popup {
+    position:fixed;
+    background-image:url(../game/resources/images/other/bg_transparent_black_pixel_215.png);
+    background-repeat:repeat;
+    color:yellow;
+    border:2px solid yellow;
+}
+#popup .title {
+    margin:0px;
+    background-color:yellow;
+    color:black;
+    font-size:20px;
+    cursor:pointer;
+}
+
+#popup .buttons {
+    float:right;
+    margin-right:6px;
+    margin-bottom:6px;
+}
+
+#notifications {
+    position:absolute;
+    overflow:hidden;
+}
+#notifications div[name="notification"] {
+    cursor:pointer;
+    margin-bottom:5px;
+    -webkit-user-drag:none;
+}
+/*
+    prevent dragging of notification images
+*/
+#notifications div[name="notification"] img {
+    -webkit-user-drag:none;
+}
+
+.greypage {
+    position:absolute;
+    overflow:hidden;
+    background-color:whitesmoke;
+    border:2px solid yellow;
+    width:450px;
+    margin:0;
+    padding:0;
+}
+.greypage div.tab {
+    width:33.3%;
+    float:left;
+    cursor:pointer;
+    border-bottom:1px dashed grey;
+}
+.greypage div.tab .selected {
+    background-color:yellow;
+}
+.greypage div.tab:hover {
+    background-color:yellow;
+}
+.greypage div.tab span.title {
+    display:inline-block;
+    margin:5px;
+    font-size:21px;
+    text-transform:uppercase;
+}
+.greypage div.content {
+    margin:15px;
+    text-align:left;
+    overflow:hidden;
+}
+.greypage table {
+    color:black;
+}
+.greypage a {
+    color:orangered;
+}
+
+#menu .button_big_grey {
+    margin:0;
+    margin-top:6px;
+    width:100%;
+}
+#menu .button_big_grey:hover {
+    background-color:grey;
+    color:white;
+    cursor:pointer;
+}
+#menu .button_big_grey .txt {
+    margin:0px;
+    float:left;
+    font-size:19px;
+    font-weight:bold;
+    text-transform:uppercase;
+}
+#menu div[name="content-play"] .city_listing {
+    margin-bottom:10px;
+    background-color:grey;
+    color:white;
+}
+#menu div[name="content-play"] .city_listing span.stat {
+    display:block;
+    font-size:12px;
+}
+#menu div[name="content-play"] .city_listing:hover {
+    cursor:pointer;
+}
+
+#panel {
+    text-align:left;
+    position:absolute;
+    background-image:url(../game/resources/images/other/bg_transparent_black_pixel_215.png);
+    background-repeat:repeat;
+}
+#panel img {
+    margin-top:7px;
+    margin-left:7px;
+}
+#panel img[name|="tab"]:hover{
+    cursor:pointer;
+}
+
+#base_tabcontent div[name|="tabcontent"] {
+    position:absolute;
+    background-image:url(../game/resources/images/other/bg_transparent_black_pixel_215.png);
+    background-repeat:repeat;
+    padding:10px;
+    border:1px solid black;
+    color:white;
+}
+#base_tabcontent img:hover {
+    cursor:pointer;
+}
+#base_tabcontent .button {
+    float:left;
+    background-color:black;
+    text-align:center;
+    line-height:30px;
+    cursor:pointer;
+}
+#base_tabcontent .button:hover {
+    background-color:#1D1D1D;
+}
+
+div.interface {
+    position:absolute;
+    background-image:url(../game/resources/images/other/bg_transparent_black_pixel_215.png);
+    background-repeat:repeat;
+    display:hidden;
+    border:1px solid yellow;
+    color:yellow;
+}
+div.interface button {
+    margin-bottom:6px;
+    margin-left:6px;
+    background-color:black;
+    border:1px solid yellow;
+    color:white;
+    float:right;
+}
+
+div.interface textarea, div.interface select {
+    background-color:black;
+    border:1px solid yellow;
+    color:white;
+}
+
+div.interface div.title {
+    margin:0;
+    padding:0;
+    background-color:yellow;
+    color:black;
+    margin-bottom:7px;
+    text-align:center;
+}
+div.interface div.description {
+    display:inline-block; /* without this the margins will collapse */
+    width:100%;
+    margin-bottom:10px;
+    background-color:black;
+    border:1px dashed yellow;
+    color:grey;
+}
+div.interface input {
+    background-color:black;
+    border:1px solid yellow;
+    color:white;
+    padding:3px;
+}
+div.interface div.tabs {
+    width:100%;
+    border-bottom:1px solid yellow;
+    margin-bottom:8px;
+}
+div.interface div.tabs div.tab {
+    display:inline-block;
+    margin-right:3px;
+    margin-left:3px;
+    padding:6px;
+    border-top:1px solid yellow;
+    border-right:1px solid yellow;
+    border-left:1px solid yellow;
+    background-color:black;
+    color:yellow;
+    text-align:center;
+    text-transform:capitalize;
+}
+div.interface div.tabs div.tab:hover {
+    cursor:pointer;
+    background-color:grey;
+}
+div.interface .rank_normal {
+    width:100%;
+    margin-bottom:8px;
+    border:1px solid #191919;
+    background-color:#383838;
+    color:white;
+    cursor:pointer;
+}
+div.interface .rank_rare {
+    width:100%;
+    margin-bottom:8px;
+    border:1px solid #AD8400;
+    background-color:#FFE684;
+    font-weight:bold;
+    color:purple;
+    cursor:pointer;
+}
+
+div.interface .motd {
+    display:inline-block; /* without this the margins will collapse */
+    width:95%;
+    margin-bottom:10px;
+    background-color:black;
+    border:1px dashed yellow;
+    color:grey;
+}
+
+div.message { border:2px solid #A0A0A0;background-color:#777777; }
+div.message div.leftPanel { float:left;width:30%; }
+div.message div.leftPanelContent { margin:6px;text-align:center;color:white; }
+div.message div.rightPanel { float:right;width:70%;background-color:#404040; }
+div.message div.rightPanelContent { margin:6px;; }
+div.message div.rightPanelContent div.msgDate { font-size:12px; text-align:right;margin-bottom:10px;}
+
+#loading_icon {
+    position:absolute;
+}
+
+#gameContainer .fullMsg {
+    position:absolute;
+    width:100%;
+    margin:0;
+    padding:0;
+}
+
+div.interface a {
+    color:orange;
+    font-weight:bold;
+}
+
+div.interface ul.directory_listing li {
+    padding:4px;
+}
+
+.fullMsg.updateNotification {
+    z-index:2;
+    background-color:#FFBB55;
+    border-bottom:2px solid #C17400;
+    color:#6599FF;
+}
+
+.fullMsg.updateNotification a {
+    color:#6599FF;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+#devConsole {
+    background-image:url(../game/resources/images/other/bg_transparent_black_pixel_215.png);
+    background-repeat:repeat;
+    color:whitesmoke;
+    height:200px;
+    z-index:3;
+}
+
+#devConsole .msg {
+    text-align:left;
+    width:60%;
+    margin:4px 8px 4px 8px;
+    word-wrap:normal;
+}
+
+#devConsole .commandInput {
+    position:absolute;
+    bottom:0px;
+    text-align:left;
+    width:100%;
+    background-image:url(../game/resources/images/other/bg_transparent_black_pixel_215.png);
+    background-repeat:repeat;
+    color:whitesmoke;
+}
+
+#devConsole .commandInput:hover {
+    width:100%;
+    background-image:url(../game/resources/images/other/bg_transparent_yellow_pixel_215.png);
+    background-repeat:repeat;
+    color:black;
+}
+
+#devConsole .commandInput:hover input {
+    color:black;
+}
+
+#devConsole .commandInput input {
+    outline: none;
+    border:none;
+    width:60%;
+    background-color:transparent;
+    color:whitesmoke;
+}
+
+.global {
+    background-color:#3687C1;
+    color:#D1ECFF;
+}
+
+.unread {
+    font-weight:bold;
+}
+
+ul.inline {
+    list-style-type:none;
+}
+
+ul.inline li {
+    display:inline;
+}
+
+li.pagination {
+    margin-right:6px;
+    border:1px solid grey;
+    background-color:black;
+    color:yellow;
+    padding:8px;
+}
+
+li.pagination:hover {
+    cursor:pointer;
+}
+
+li.pagination.selected {
+    color:orangered;
+}
+
+.alliBigButton {
+    width:100%;
+    height:35px;
+}
+
+.p-header {
+    font-size:19px;
+    text-decoration:underline;
+    color:white;
+}
+
+input.grey {
+    background-color:#292929;
+    border:1px solid yellow;
+    color:white;
+}
+input.nofocus {
+    outline-width:0;
+}
+
+.big_input {
+    padding:6px;
+}
+
+table.msgTable tr {
+    background-color:#404040;
+}
+
+.error {
+    padding:15px;
+    text-align:center;
+    margin:0 auto;
+    border:1px solid #400000;
+    background-color:#880000;
+    color:whitesmoke;
+}
+
+.content {
+    padding:6px;
+}
+
+.left {
+    float:left;
+}
+.right {
+    float:right;
+}
+.center {
+    display:block;
+    margin:0 auto;
+    text-align:center;
+}
+.clear {
+    clear:both;
+}
+.hidden {
+    display:none;
+}
+.margin_right_small {
+    margin-right:7px;
+}
+.full {
+    width:100%;
+}
+.absolute {
+    position:absolute;
+}
+
+.field_padding {
+    padding:6px;
+}
+
+.transparent_bg_black_215 {
+    background-image:url(../game/resources/images/other/bg_transparent_black_pixel_215.png);
+    background-repeat:repeat;
+}
+
+//http://stackoverflow.com/questions/826782/css-rule-to-disable-text-selection-highlighting
+.noselect {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+@font-face {
+    font-family: 'PT Sans Narrow', sans-serif;
+    src: url(http://fonts.googleapis.com/css?family=PT+Sans+Narrow);
+}

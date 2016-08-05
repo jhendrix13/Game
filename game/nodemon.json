@@ -1,0 +1,18 @@
+{
+  "restartable": "rs",
+  "ignore": [
+    "client_modules/"
+  ],
+  "execMap": {
+    "js": "node --harmony"
+  },
+  "events": {},
+  "watch": [
+    "server.js",
+    "server_modules/"
+  ],
+  "env": {
+    "NODE_ENV": "development"
+  },
+  "ext": "js json"
+}
